@@ -1,17 +1,20 @@
 import { Box, Button, Card, CardActions, CardContent, Typography } from "@mui/material";
 import Image from "next/image";
+import PrimarySearchAppBar from "./components/navbar";
 
 const bull = (
   <Box
     component="span"
     sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
   >
-    •
+    
   </Box>
 );
 
 export default function Home() {
   return (
+    <>
+    <PrimarySearchAppBar/>
 <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -33,5 +36,6 @@ export default function Home() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
+    </>
   );
 }
