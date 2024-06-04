@@ -156,24 +156,28 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" 
-      sx={{ bgcolor: "#1d1d1d",
-      color: "#919191",
+    <Box>
+      <AppBar position="static"
+        sx={{
+          bgcolor: "#1d1d1d",
+          color: "#919191",
+        }}>
 
-      }}>
-        <Toolbar>
-          
+        <Toolbar sx={{
+          display:"flex",
+          justifyContent:"space-between",
+        }}>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ fontSize: "16px",
-                display: { xs: 'none', sm: 'block' } }}
+            sx={{
+              fontSize: "16px",
+              display: { xs: 'none', sm: 'block' }
+            }}
           >
             HD movies at the smallest file size
           </Typography>
-          <Box sx={{ flexGrow: 1 }} />
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -183,71 +187,78 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
           <Box
             sx={{
-                background: "pink",
-                display: "flex",
-                flexDisplay: "row",
-                justifyContent: "space-between",
-                padding: "20px",
+              // background: "pink",
+              display: "flex",
+              gap:'20px',
+              flexDisplay: "row",
+              justifyContent: "space-between",
             }}
-            >
-          <Typography
-          variant="h6"
-          noWrap
-          component="div"
-          sx={{ fontSize: "16px",
-             display: { xs: 'none', sm: 'block' } }}
           >
-            Home
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                fontSize: "16px",
+                display: { xs: 'none', sm: 'block' }
+              }}
+            >
+              Home
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                fontSize: "16px",
+                display: { xs: 'none', sm: 'block' }
+              }}
+            >
+              4K
             </Typography>
 
-            
             <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ fontSize: "16px",
-                display: { xs: 'none', sm: 'block' } }}
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                fontSize: "16px",
+                display: { xs: 'none', sm: 'block' }
+              }}
             >
-                4K
-                </Typography>
+              Trending
+            </Typography>
 
-                <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ fontSize: "16px",
-                display: { xs: 'none', sm: 'block' } }}
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                fontSize: "16px",
+                display: { xs: 'none', sm: 'block' }
+              }}
             >
-                Trending
-                </Typography>
-
-                <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ fontSize: "16px",
-                display: { xs: 'none', sm: 'block' } }}
+              Browse Movies
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                fontSize: "16px",
+                display: { xs: 'none', sm: 'block' }
+              }}
             >
-                Browse Movies
-                </Typography>
-                <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ fontSize: "16px",
-                display: { xs: 'none', sm: 'block' } }}
-            >
-                Login / Register
-                </Typography>
-            </Box>
+              Login / Register
+            </Typography>
+          </Box>
 
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      
     </Box>
   );
 }
- 
