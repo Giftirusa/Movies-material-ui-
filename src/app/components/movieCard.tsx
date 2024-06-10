@@ -8,7 +8,7 @@ export default function MovieCard({ title, img, rating, genre, year }: {
     rating: Number
 }) {
     return (
-        <>
+        <Box>
             <Box sx={{
                 '&:hover': {
                     borderColor: "#6AC045",
@@ -37,6 +37,7 @@ export default function MovieCard({ title, img, rating, genre, year }: {
                     height: "100%",
                     transition: "all .3s",
                 }}>
+                    
                     <Box>
                         ⭐
                     </Box>
@@ -74,7 +75,7 @@ export default function MovieCard({ title, img, rating, genre, year }: {
 
 
 
-        </>
+        </Box>
     );
 
 }
