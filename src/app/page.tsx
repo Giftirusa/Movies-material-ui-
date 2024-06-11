@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import PrimarySearchAppBar from "./components/navbar";
 import MovieCard from "./components/movieCard";
 import Hero from "./components/hero";

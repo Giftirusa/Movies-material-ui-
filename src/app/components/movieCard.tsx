@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 
 export default function MovieCard({ title, img, rating, genre, year }: {
     img: string
@@ -8,6 +8,7 @@ export default function MovieCard({ title, img, rating, genre, year }: {
     rating: Number
 }) {
     return (
+        <Link href="/details">
         <Box>
             <Box sx={{
                 '&:hover': {
@@ -76,6 +77,7 @@ export default function MovieCard({ title, img, rating, genre, year }: {
 
 
         </Box>
+        </Link>
     );
 
 }
