@@ -6,12 +6,13 @@ export default function Footer() {
             display:"flex",
             flexDirection:"column",
             alignItems:"center",
+            gap:"5px"
         }}>
         <Box sx={{
             color:"grey",
             display:"flex",
             flexDirection:"row",
-
+            gap:"5px"
         }}>
             <Typography sx={{
                 "&:hover":{color:"white"}
@@ -20,7 +21,6 @@ export default function Footer() {
 
             </Typography>
             -
-
             <Typography sx={{
                 "&:hover":{color:"white"}
             }}>
@@ -82,6 +82,7 @@ export default function Footer() {
             <Box  sx={{
             color:"grey",
             display:"flex",
+            gap:"5px",
             flexDirection:"row",
 
         }}>
@@ -108,7 +109,6 @@ export default function Footer() {
             </Box>
             <Box sx={{
                 color:"white",
-                  
             }}>
                 <Typography>
                   By using this site you agree to and accept our <Typography component="span" sx={{color:"grey" ,"& hover": {color:"white"}}}>User Agreement</Typography>,which can be read <Typography component="span" sx={{color:"grey","&:hover": {color:"white"}}}>here.</Typography>
