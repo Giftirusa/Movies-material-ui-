@@ -1,4 +1,5 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import Link from "next/link";
 
 export default function MovieCard({ title, img, rating, genre, year }: {
     img: string
@@ -8,75 +9,81 @@ export default function MovieCard({ title, img, rating, genre, year }: {
     rating: Number
 }) {
     return (
-        <Link href="/details">
-        <Box>
-            <Box sx={{
-                '&:hover': {
-                    borderColor: "#6AC045",
-                },
-                transition: "all .3s",
-                border: "solid 3px white",
-                width: "160px",
-                height: "250px",
-                borderRadius: "5px",
-                backgroundSize: "contain",
-                backgroundImage: `url(${img})`,
-            }}>
+        
+        <Link href={{
+            pathname: '/details',
+            query: {
+                movieTitle: title,
+                movieImage: img,
+            }
+        }} ><Box>
                 <Box sx={{
                     '&:hover': {
-                        opacity: .9,
-                        backgroundColor: "black",
-                        translate:"0 0"
+                        borderColor: "#6AC045",
                     },
-                    translate:"0 10px",
-                    color: "white",
-                    opacity: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "space-evenly",
-                    height: "100%",
                     transition: "all .3s",
+                    border: "solid 3px white",
+                    width: "160px",
+                    height: "250px",
+                    borderRadius: "5px",
+                    backgroundSize: "contain",
+                    backgroundImage: `url(${img})`,
                 }}>
-                    
-                    <Box>
-                        ⭐
+                    <Box sx={{
+                        '&:hover': {
+                            opacity: .9,
+                            backgroundColor: "black",
+                            translate: "0 0"
+                        },
+                        translate: "0 10px",
+                        color: "white",
+                        opacity: 0,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "space-evenly",
+                        height: "100%",
+                        transition: "all .3s",
+                    }}>
+
+                        <Box>
+                            ⭐
+                        </Box>
+                        <Typography> {rating.toString()} / 10</Typography>
+                        <Typography> {genre}</Typography>
+                        <Button
+                            variant="contained"
+                            color="success"
+                        >
+                            View Details
+                        </Button>
                     </Box>
-                    <Typography> {rating.toString()} / 10</Typography>
-                    <Typography> {genre}</Typography>
-                    <Button 
-                        variant="contained" 
-                        color="success"
-                    >
-                        View Details
-                    </Button>
                 </Box>
-            </Box>
 
-            <Box sx={{
-                width: "140px",
-                height: "50px",
-            }}>
-                <Typography sx={{
-                    color: "white",
-                    fontSize: "10px",
+                <Box sx={{
+                    width: "140px",
+                    height: "50px",
                 }}>
-                    {title}
-                </Typography>
+                    <Typography sx={{
+                        color: "white",
+                        fontSize: "10px",
+                    }}>
+                        {title}
+                    </Typography>
 
-                <Typography sx={{
-                    color: "white",
-                    fontSize: "10px"
-                }}
-                >
-                    {year}
-                </Typography>
+                    <Typography sx={{
+                        color: "white",
+                        fontSize: "10px"
+                    }}
+                    >
+                        {year}
+                    </Typography>
+
+                </Box>
+
+
 
             </Box>
-
-
-
-        </Box>
         </Link>
     );
 

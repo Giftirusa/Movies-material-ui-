@@ -4,7 +4,7 @@ import MovieCard from "../components/movieCard";
 import Footer from "../components/footer";
 
 
-export default function Page() {
+export default function Page({searchParams}:{searchParams:any}) {
     return (
         <>
             <PrimarySearchAppBar />
@@ -16,7 +16,7 @@ export default function Page() {
                 gap: "100px"
             }}>
                 <Box>
-                    <MovieCard genre="Action" rating={5.7} title={"Torn Curtains"} img={"https://yts.homes/upload/5c0699d266bad40688a8791ca75f0b15.jpg"} year={"1966"} />
+                    <MovieCard genre="Action" rating={5.7} title={searchParams.movieTitle} img={searchParams.movieImage} year={"1966"} />
                     <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                         <Button variant="contained" color="success">Download</Button>
                         <Button variant="contained" color="info">Watch Now</Button>
@@ -28,7 +28,7 @@ export default function Page() {
                     <Typography
                         sx={{ fontSize: "40px", marginBottom: "20px" }}
                     >
-                        Torn Curtain
+                        {searchParams.movieTitle}
                     </Typography>
 
                     <Typography>
