@@ -185,11 +185,12 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box
             sx={{
-                background: "black",
+                // background: "black",
                 display: "flex",
                 flexDisplay: "row",
                 justifyContent: "space-between",
                 padding: "20px",
+                gap:"15px",
 
             }}
             >
@@ -254,9 +255,8 @@ export default function PrimarySearchAppBar() {
 
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
+      // {renderMobileMenu}
       
     </Box>
   );
 }
- 
