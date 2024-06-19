@@ -15,6 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import Link from 'next/link';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -183,6 +184,7 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
           <Box
             sx={{
                 // background: "black",
@@ -194,6 +196,7 @@ export default function PrimarySearchAppBar() {
 
             }}
             >
+              <Link href="/">
           <Typography
           variant="h6"
           noWrap
@@ -206,8 +209,9 @@ export default function PrimarySearchAppBar() {
           >
             Home
             </Typography>
+            </Link>
 
-            
+            <Link href="/">
             <Typography
             variant="h6"
             noWrap
@@ -218,6 +222,8 @@ export default function PrimarySearchAppBar() {
             >
                 4K
                 </Typography>
+                </Link>
+                <Link href="/">
 
                 <Typography
             variant="h6"
@@ -230,6 +236,8 @@ export default function PrimarySearchAppBar() {
             >
                 Trending
                 </Typography>
+                </Link>
+                <Link href="/">
 
                 <Typography
             variant="h6"
@@ -242,6 +250,8 @@ export default function PrimarySearchAppBar() {
             >
                 Browse Movies
                 </Typography>
+                </Link>
+                <Link href="/">
                 <Typography
             variant="h6"
             noWrap
@@ -251,6 +261,7 @@ export default function PrimarySearchAppBar() {
             >
                 Login / Register
                 </Typography>
+                </Link>
             </Box>
 
         </Toolbar>
